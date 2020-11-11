@@ -1,0 +1,4447 @@
+{
+	"info": {
+		"_postman_id": "af0659d7-bcd1-4f7a-903c-aabb54abd9ef",
+		"name": "AZNW",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET's",
+			"item": [
+				{
+					"name": "list projects",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "8288d994-6434-48db-b798-29f5e03546cf",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/projects",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"projects"
+							]
+						},
+						"description": "Get all projects"
+					},
+					"response": []
+				},
+				{
+					"name": "list users",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "d535b678-191c-48cc-84d0-5eb5429defb2",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users"
+							]
+						},
+						"description": "Get all users"
+					},
+					"response": []
+				},
+				{
+					"name": "list companies",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "cf80e563-4b18-4eb5-9547-f8121e0f535d",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/companies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"companies"
+							]
+						},
+						"description": "Get all companies"
+					},
+					"response": []
+				},
+				{
+					"name": "list customers",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "85b562b7-24a7-4063-8273-112ee0d674a9",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"customers"
+							]
+						},
+						"description": "Get all customers"
+					},
+					"response": []
+				},
+				{
+					"name": "list persons",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "959b422c-a9fa-4ac8-a389-655c88556dd4",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/persons",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"persons"
+							]
+						},
+						"description": "Get all persons"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "POST's",
+			"item": [
+				{
+					"name": "Activity anlegen",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"bla\",\r\n    \"project\": \"http://localhost:8080/api/projects/2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/activities",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"activities"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Customer anlegen",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "8b86f262-022e-4499-95ca-cdde000fd3c5",
+								"exec": [
+									"\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									"pm.test(\"Successful POST request\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \r\n    \"firstName\":\"Customer\",\r\n    \"lastName\":\"One\",\r\n    \"companyPosition\": \"CEO\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"customers"
+							]
+						},
+						"description": "Legt einen Kunden an"
+					},
+					"response": []
+				},
+				{
+					"name": "Customer anlegen mit Project",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "0e04699b-dda2-4936-9626-7b5a76cd4516",
+								"exec": [
+									"\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									"pm.test(\"Successful POST request\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"firstName\":\"Customer\",\r\n    \"lastName\":\"One\",\r\n    \"companyPosition\": \"CEO\",\r\n    \"project\": \"http://localhost:8080/api/projects/7\"\r\n        \r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"customers"
+							]
+						},
+						"description": "Legt einen Kunden mit Projekt an."
+					},
+					"response": []
+				},
+				{
+					"name": "Customer anlegen mit Company",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ba97a60b-2f02-4fd2-a9c9-d59556eeeb02",
+								"exec": [
+									"\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									"pm.test(\"Successful POST request\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"firstName\":\"Customer\",\r\n    \"lastName\":\"One\",\r\n    \"companyPosition\": \"CEO\",\r\n    \"company\": \"http://localhost:8080/api/companies/11\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"customers"
+							]
+						},
+						"description": "Legt einen Kunden mit zugehörigen Firma an."
+					},
+					"response": []
+				},
+				{
+					"name": "Customer anlegen mit Company und Project",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "5b090315-e210-4b85-a58e-cf7955ae1910",
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+									"});\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"firstName\":\"Customer\",\r\n    \"lastName\":\"One\",\r\n    \"companyPosition\": \"CEO\",\r\n    \"company\": \"http://localhost:8080/companies/1\",\r\n    \"project\": \"http://localhost:8080/projects/1\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"customers"
+							]
+						},
+						"description": "Legt einen Kunden mit zugehörigen Firma und Projekt an."
+					},
+					"response": []
+				},
+				{
+					"name": "Project anlegen",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "8546f5fc-85b2-4c6b-8e05-5f8713e657b7",
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+									"});\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Projekt Name2\",\r\n    \"description\":\"Projekt Beschreibung\",\r\n    \"actualEndDate\":\"2022-03-10T16:00:00.000\",\r\n    \"planedEndDate\":\"2021-03-10T16:00:00.000\",\r\n    \"startDate\":\"2020-03-10T16:00:00.000\",\r\n    \"status\":\"0\",\r\n    \"planedProjectWorkingHours\": 2000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/projects",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"projects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Project anlegen mit Company",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "4091605e-3590-4332-9eda-6d121ba1e64b",
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+									"});\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"testProjekt5\",\r\n    \"description\":\"Projekt Beschreibung\",\r\n    \"actualEndDate\":\"2022-03-10T16:00:00.000\",\r\n    \"planedEndDate\":\"2021-03-10T16:00:00.000\",\r\n    \"startDate\":\"2020-03-10T16:00:00.000\",\r\n    \"status\":\"0\",\r\n    \"planedProjectWorkingHours\": 2000,\r\n    \"company\": \"http://localhost:8080/api/companies/25\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/projects",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"projects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Project anlegen mit Company und Customer",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "dd99b8e1-dd46-479b-9ee4-884761c99147",
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+									"});\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"testProjekt2\",\r\n    \"description\":\"Projekt Beschreibung\",\r\n    \"actualEndDate\":\"2022-03-10T16:00:00.000\",\r\n    \"planedEndDate\":\"2021-03-10T16:00:00.000\",\r\n    \"startDate\":\"2020-03-10T16:00:00.000\",\r\n    \"status\":\"0\",\r\n    \"planedProjectWorkingHours\": 2000,\r\n    \"company\": \"http://localhost:8080/companies/1\",\r\n    \"customer\": \"http://localhost:8080/customers/1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/projects",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"projects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Project anlegen mit Company, Customer und User",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "dcda8cef-4ff8-4488-84a5-e15a73f47d08",
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+									"});\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"testProjekt2\",\r\n    \"description\":\"Projekt Beschreibung\",\r\n    \"actualEndDate\":\"2022-03-10T16:00:00.000\",\r\n    \"planedEndDate\":\"2021-03-10T16:00:00.000\",\r\n    \"startDate\":\"2020-03-10T16:00:00.000\",\r\n    \"status\":\"0\",\r\n    \"planedProjectWorkingHours\": 2000,\r\n    \"company\": \"http://localhost:8080/companies/1\",\r\n    \"customer\": \"http://localhost:8080/customers/1\",\r\n    \"user\": \"http://localhost:8080/users/1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/projects",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"projects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Company anlegen",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ef24302c-4be4-44eb-bbb0-c2fbbe3dccd7",
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+									"});\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Company Name2\",\r\n    \"countryCode\": \"73553\",\r\n    \"place\": \"Pfahlbronn\",\r\n    \"street\": \"Fasanenstraße 30\",\r\n    \"phoneNumber\": \"07172 188432\",\r\n    \"companyUrl\": \"https://CompanyXY.de\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/companies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"companies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Company anlegen mit Project",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f914e341-0a45-462c-add0-634042f5df79",
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+									"});\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Company Name3\",\r\n    \"countryCode\": \"73553\",\r\n    \"place\": \"Pfahlbronn\",\r\n    \"street\": \"Fasanenstraße 30\",\r\n    \"phoneNumber\": \"07172 188432\",\r\n    \"companyUrl\": \"https://CompanyXY.de\",\r\n    \"project\": \"http://localhost:8080/projects/2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/companies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"companies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Company anlegen mit Project und Customer",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "55c84eb7-1921-4567-aa7f-f66ce2362331",
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+									"});\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Company Name\",\r\n    \"countryCode\": \"73553\",\r\n    \"place\": \"Pfahlbronn\",\r\n    \"street\": \"Fasanenstraße 30\",\r\n    \"phoneNumber\": \"07172 188432\",\r\n    \"companyUrl\": \"https://CompanyXY.de\",\r\n    \"project\": \"http://localhost:8080/projects/1\",\r\n    \"customer\": \"http://localhost:8080/customers/1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/companies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"companies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Company anlegen mit Project, Customer und User",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "32cf8491-1fb1-4dea-98f8-543064e992cc",
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+									"});\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Company Name\",\r\n    \"countryCode\": \"73553\",\r\n    \"place\": \"Pfahlbronn\",\r\n    \"street\": \"Fasanenstraße 30\",\r\n    \"phoneNumber\": \"07172 188432\",\r\n    \"companyUrl\": \"https://CompanyXY.de\",\r\n    \"project\": \"http://localhost:8080/projects/1\",\r\n    \"customer\": \"http://localhost:8080/customers/1\",\r\n    \"user\": \"http://localhost:8080/users/1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/companies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"companies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User anlegen",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "1b93c56b-b3a0-45f1-afbc-81be9898ea45",
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+									"});\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\":\"Max\",\r\n    \"lastName\":\"Müller\",\r\n    \"utiligencePosition\": \"trainee\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users"
+							]
+						},
+						"description": "Legt einen Benutzer an"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "PUT's",
+			"item": [
+				{
+					"name": "Projekt ändern mit Company",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "631c9550-6ec4-4dfa-a117-ef68edc0c3c3",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"testProjekt2\",\r\n    \"company\": \"http://localhost:8080/companies/2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/projects/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"projects",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "company ändern mit projekt",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"testcomp55\",\r\n    \"projects\": [\"http://localhost:8080/projects/4\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/companies/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"companies",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "company ändern uri-list",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/uri-list",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\"http://localhost:8080/projects/4\"",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/companies/5/projects",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"companies",
+								"5",
+								"projects"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Test Daten",
+			"item": [
+				{
+					"name": "Ohne Verknüpfungen",
+					"item": [
+						{
+							"name": "User Anlegen ID 1-12",
+							"item": [
+								{
+									"name": "User anlegen - Peter Lustig",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "92ef9635-f323-4513-9f4b-00cae4f7da78",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+													"});\r",
+													"pm.test(\"Response time is less than 200ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"firstName\":\"Peter\",\r\n    \"lastName\":\"Lustig\",\r\n    \"utiligencePosition\": \"trainee\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/users",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"users"
+											]
+										},
+										"description": "Legt einen Benutzer an"
+									},
+									"response": []
+								},
+								{
+									"name": "User anlegen - Otto Walkes",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "6836f87d-8577-41b6-b295-4d0fb3d625fe",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+													"});\r",
+													"pm.test(\"Response time is less than 200ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"firstName\":\"Otto\",\r\n    \"lastName\":\"Walkes\",\r\n    \"utiligencePosition\": \"Chef\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/users",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"users"
+											]
+										},
+										"description": "Legt einen Benutzer an"
+									},
+									"response": []
+								},
+								{
+									"name": "User anlegen - Cheech Marin",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "c98d03cf-a929-4248-9927-43586ffece0f",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+													"});\r",
+													"pm.test(\"Response time is less than 200ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"firstName\":\"Cheech\",\r\n    \"lastName\":\"Marin\",\r\n    \"utiligencePosition\": \"Product Managment\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/users",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"users"
+											]
+										},
+										"description": "Legt einen Benutzer an"
+									},
+									"response": []
+								},
+								{
+									"name": "User anlegen - Tommy Chong",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "e96feca5-a3a5-428b-9fa7-5500f9b99443",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+													"});\r",
+													"pm.test(\"Response time is less than 200ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"firstName\":\"Tommy\",\r\n    \"lastName\":\"Chong\",\r\n    \"utiligencePosition\": \"Product Managment\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/users",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"users"
+											]
+										},
+										"description": "Legt einen Benutzer an"
+									},
+									"response": []
+								},
+								{
+									"name": "User anlegen - Mario Bart",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "11cf25c3-4fdb-4b0c-8c0a-9e9a4ac7ce5b",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+													"});\r",
+													"pm.test(\"Response time is less than 200ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"firstName\":\"Mario\",\r\n    \"lastName\":\"Bart\",\r\n    \"utiligencePosition\": \"Marketing\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/users",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"users"
+											]
+										},
+										"description": "Legt einen Benutzer an"
+									},
+									"response": []
+								},
+								{
+									"name": "User anlegen - Herbert Grönemeyer",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "a550cf30-6e5f-447e-9c9b-8bedc8ed3ad0",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+													"});\r",
+													"pm.test(\"Response time is less than 200ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"firstName\":\"Herbert\",\r\n    \"lastName\":\"Grönemeyer\",\r\n    \"utiligencePosition\": \"Marketing Chef\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/users",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"users"
+											]
+										},
+										"description": "Legt einen Benutzer an"
+									},
+									"response": []
+								},
+								{
+									"name": "User anlegen - Dieter Hallerform",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "47923c99-ad05-4216-96ac-71529a816c25",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+													"});\r",
+													"pm.test(\"Response time is less than 200ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"firstName\":\"Dieter\",\r\n    \"lastName\":\"Hallerform\",\r\n    \"utiligencePosition\": \"Backend\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/users",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"users"
+											]
+										},
+										"description": "Legt einen Benutzer an"
+									},
+									"response": []
+								},
+								{
+									"name": "User anlegen - Mike Tyson",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "4be7f4da-7e07-44ef-91e3-822e5fe902b1",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+													"});\r",
+													"pm.test(\"Response time is less than 200ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"firstName\":\"Mike\",\r\n    \"lastName\":\"Tyson\",\r\n    \"utiligencePosition\": \"COO\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/users",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"users"
+											]
+										},
+										"description": "Legt einen Benutzer an"
+									},
+									"response": []
+								},
+								{
+									"name": "User anlegen - Nina Hagen",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "fbf22603-adc8-4270-bdd1-f670f058e69d",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+													"});\r",
+													"pm.test(\"Response time is less than 200ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"firstName\":\"Nina\",\r\n    \"lastName\":\"Hagen\",\r\n    \"utiligencePosition\": \"Trainee\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/users",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"users"
+											]
+										},
+										"description": "Legt einen Benutzer an"
+									},
+									"response": []
+								},
+								{
+									"name": "User anlegen - Silvester Stalone",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "5f0b91af-1fdf-4623-ae3d-ce2201e56744",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+													"});\r",
+													"pm.test(\"Response time is less than 200ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"firstName\":\"Silvester\",\r\n    \"lastName\":\"Stalone\",\r\n    \"utiligencePosition\": \"Warehouse Manager\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/users",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"users"
+											]
+										},
+										"description": "Legt einen Benutzer an"
+									},
+									"response": []
+								},
+								{
+									"name": "User anlegen - Bill Buffelo",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "a47883f1-7bcc-4303-bed1-e9ede55ed1ba",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+													"});\r",
+													"pm.test(\"Response time is less than 200ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"firstName\":\"Bill\",\r\n    \"lastName\":\"Buffelo\",\r\n    \"utiligencePosition\": \"Customer Manager\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/users",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"users"
+											]
+										},
+										"description": "Legt einen Benutzer an"
+									},
+									"response": []
+								},
+								{
+									"name": "User anlegen - Billy The Kid",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "38d7174e-6fc7-4e46-9bb8-7f1596e81067",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+													"});\r",
+													"pm.test(\"Response time is less than 200ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"firstName\":\"Billy\",\r\n    \"lastName\":\"The Kid\",\r\n    \"utiligencePosition\": \"Selling Manager\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/users",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"users"
+											]
+										},
+										"description": "Legt einen Benutzer an"
+									},
+									"response": []
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Project Anlegen ID 13-24",
+							"item": [
+								{
+									"name": "Projekt anlegen - Findet Nemo",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "47ec23ac-90ab-4164-9589-7627a4705e50",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+													"});\r",
+													"pm.test(\"Response time is less than 200ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Findet Nemo\",\r\n    \"description\":\"Ein Fisch sucht seinen Sohn\",\r\n    \"actualEndDate\":\"2022-03-10T16:00:00.000\",\r\n    \"planedEndDate\":\"2021-03-10T16:00:00.000\",\r\n    \"startDate\":\"2020-03-10T16:00:00.000\",\r\n    \"status\":\"0\",\r\n    \"planedProjectWorkingHours\": 2000\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/projects",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"projects"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Projekt anlegen - Monster AG",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "badc1afe-5f6b-42a3-be8b-16f710670c04",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+													"});\r",
+													"pm.test(\"Response time is less than 200ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Monster AG\",\r\n    \"description\":\"Eine Firma mit Traum Monstern\",\r\n    \"actualEndDate\":\"2018-03-10T16:00:00.000\",\r\n    \"planedEndDate\":\"2018-03-10T16:00:00.000\",\r\n    \"startDate\":\"2017-03-10T08:00:00.000\",\r\n    \"status\":\"1\",\r\n    \"planedProjectWorkingHours\": 150\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/projects",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"projects"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Projekt anlegen - Lucky Luke",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "a4a5add2-eeec-4fa9-b9c6-c998c7319cf2",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+													"});\r",
+													"pm.test(\"Response time is less than 200ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Lucky Luke\",\r\n    \"description\":\"Eine Cowboy der schneller ist als sein Schatten\",\r\n    \"actualEndDate\":\"2011-06-30T16:00:00.000\",\r\n    \"planedEndDate\":\"2011-09-10T16:00:00.000\",\r\n    \"startDate\":\"2009-03-10T08:00:00.000\",\r\n    \"status\":\"1\",\r\n    \"planedProjectWorkingHours\": 2500\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/projects",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"projects"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Projekt anlegen - Speed",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "4a858b84-3daa-492b-8623-3e022bbc1d39",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+													"});\r",
+													"pm.test(\"Response time is less than 200ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Speed\",\r\n    \"description\":\"Ein Bus und eine Bombe\",\r\n    \"actualEndDate\":\"2005-01-30T16:00:00.000\",\r\n    \"planedEndDate\":\"2003-01-11T16:00:00.000\",\r\n    \"startDate\":\"2000-01-12T08:00:00.000\",\r\n    \"status\":\"2\",\r\n    \"planedProjectWorkingHours\": 1500\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/projects",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"projects"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Projekt anlegen - Lock Up",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "7074e483-fa08-4872-aa78-cfb7994e0f9a",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+													"});\r",
+													"pm.test(\"Response time is less than 200ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Lock Up\",\r\n    \"description\":\"Ein Mann unschuldig hinter Gitter\",\r\n    \"actualEndDate\":\"2022-12-24T16:00:00.000\",\r\n    \"planedEndDate\":\"1983-08-09T16:00:00.000\",\r\n    \"startDate\":\"1980-08-09T16:00:00.000\",\r\n    \"status\":\"2\",\r\n    \"planedProjectWorkingHours\": 3500\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/projects",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"projects"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Projekt anlegen - Meet the Feebles",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "7e8fcdad-73ca-4eec-ae69-c321cd1de6ad",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+													"});\r",
+													"pm.test(\"Response time is less than 200ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Meet the Feebles\",\r\n    \"description\":\"Pupen drehen durch\",\r\n    \"actualEndDate\":\"2022-12-24T16:00:00.000\",\r\n    \"planedEndDate\":\"1983-08-09T16:00:00.000\",\r\n    \"startDate\":\"1981-08-09T16:00:00.000\",\r\n    \"status\":\"0\",\r\n    \"planedProjectWorkingHours\": 3500\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/projects",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"projects"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Projekt anlegen - Fritz the Cat",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "e753c668-d575-45da-983c-d87fe3c8ac44",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+													"});\r",
+													"pm.test(\"Response time is less than 200ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Fritz the Cat\",\r\n    \"description\":\"Ein Kater auf abwegen\",\r\n    \"actualEndDate\":\"2022-12-24T16:00:00.000\",\r\n    \"planedEndDate\":\"1983-08-09T16:00:00.000\",\r\n    \"startDate\":\"1980-08-09T16:00:00.000\",\r\n    \"status\":\"2\",\r\n    \"planedProjectWorkingHours\": 3500\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/projects",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"projects"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Projekt anlegen - Braindead",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "2acf5e29-c6d3-4572-bf48-de54097fb889",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+													"});\r",
+													"pm.test(\"Response time is less than 200ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Braindead\",\r\n    \"description\":\"Zombies greifen an\",\r\n    \"actualEndDate\":\"2022-12-24T16:00:00.000\",\r\n    \"planedEndDate\":\"1983-08-09T16:00:00.000\",\r\n    \"startDate\":\"1980-08-09T16:00:00.000\",\r\n    \"status\":\"2\",\r\n    \"planedProjectWorkingHours\": 3500\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/projects",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"projects"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Projekt anlegen - Bad Taste",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "66ca6581-5e3d-4126-bbcb-62d1bba246a6",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+													"});\r",
+													"pm.test(\"Response time is less than 200ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Bad Taste\",\r\n    \"description\":\"Alien greifen an\",\r\n    \"actualEndDate\":\"2022-12-24T16:00:00.000\",\r\n    \"planedEndDate\":\"1983-08-09T16:00:00.000\",\r\n    \"startDate\":\"1980-08-09T16:00:00.000\",\r\n    \"status\":\"2\",\r\n    \"planedProjectWorkingHours\": 3500\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/projects",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"projects"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Projekt anlegen - Mars Attack",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "8b41203f-f55c-4ff6-8f8e-b990d6f2bac0",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+													"});\r",
+													"pm.test(\"Response time is less than 200ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Mars Attack\",\r\n    \"description\":\"Aliens vom Mars greifen an\",\r\n    \"actualEndDate\":\"2022-12-24T16:00:00.000\",\r\n    \"planedEndDate\":\"1983-08-09T16:00:00.000\",\r\n    \"startDate\":\"1980-08-09T16:00:00.000\",\r\n    \"status\":\"2\",\r\n    \"planedProjectWorkingHours\": 3500\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/projects",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"projects"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Projekt anlegen - Mars Attack Copy",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "f2ef2e89-1c53-4567-b165-a3549c17f252",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+													"});\r",
+													"pm.test(\"Response time is less than 200ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Mars Attack\",\r\n    \"description\":\"Aliens vom Mars greifen an\",\r\n    \"actualEndDate\":\"2022-12-24T16:00:00.000\",\r\n    \"planedEndDate\":\"1983-08-09T16:00:00.000\",\r\n    \"startDate\":\"1980-08-09T16:00:00.000\",\r\n    \"status\":\"2\",\r\n    \"planedProjectWorkingHours\": 3500\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/projects",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"projects"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Projekt anlegen - Mars Attack Copy 2",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "ab8de688-39c1-4362-9f35-e28254ac2408",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+													"});\r",
+													"pm.test(\"Response time is less than 200ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Mars Attack\",\r\n    \"description\":\"Aliens vom Mars greifen an\",\r\n    \"actualEndDate\":\"2022-12-24T16:00:00.000\",\r\n    \"planedEndDate\":\"1983-08-09T16:00:00.000\",\r\n    \"startDate\":\"1980-08-09T16:00:00.000\",\r\n    \"status\":\"2\",\r\n    \"planedProjectWorkingHours\": 3500\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/projects",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"projects"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Company Anlegen ID 25-36",
+							"item": [
+								{
+									"name": "Company anlegen - Walt Disney",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "dd9f5bd1-48d1-45bd-8673-c863a39b17da",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+													"});\r",
+													"pm.test(\"Response time is less than 200ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Walt Disney\",\r\n    \"countryCode\": \"73553\",\r\n    \"place\": \"Pfahlbronn\",\r\n    \"street\": \"Fasanenstraße 30\",\r\n    \"phoneNumber\": \"07172 188432\",\r\n    \"companyUrl\": \"https://Walt.Disney.de\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/companies",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"companies"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Company anlegen - Bosch",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "0b183b4b-ccde-4ae9-98a8-bdf95b1efe03",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+													"});\r",
+													"pm.test(\"Response time is less than 200ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Bosch\",\r\n    \"countryCode\": \"72554\",\r\n    \"place\": \"Schwäbisch-Gmünd\",\r\n    \"street\": \"Robert-Bosch-Str. 32\",\r\n    \"phoneNumber\": \"07171 456232\",\r\n    \"companyUrl\": \"https://Bosch.de\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/companies",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"companies"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Company anlegen - Rikker AG",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "2a80e14b-4beb-49c2-9b20-30a2098ce600",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+													"});\r",
+													"pm.test(\"Response time is less than 200ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Rikker AG\",\r\n    \"countryCode\": \"77524\",\r\n    \"place\": \"Schorndorf\",\r\n    \"street\": \"Wieslauftalstraße 3\",\r\n    \"phoneNumber\": \"07171 956721-5\",\r\n    \"companyUrl\": \"https://Rikker.de\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/companies",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"companies"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Company anlegen - ZF",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "413e7d1f-f98c-4bfb-8ffd-083a9918e6e6",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+													"});\r",
+													"pm.test(\"Response time is less than 200ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"ZF\",\r\n    \"countryCode\": \"73553\",\r\n    \"place\": \"Alfdorf\",\r\n    \"street\": \"Bruckstraße 3\",\r\n    \"phoneNumber\": \"07172 800332\",\r\n    \"companyUrl\": \"https://ZF.de\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/companies",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"companies"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Company anlegen - Paramount",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "5869e715-3cf3-48e9-831e-3fec94a31af3",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+													"});\r",
+													"pm.test(\"Response time is less than 200ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Paramount\",\r\n    \"countryCode\": \"73555\",\r\n    \"place\": \"Lorch\",\r\n    \"street\": \"Lorcherstraße 30\",\r\n    \"phoneNumber\": \"07172 643623\",\r\n    \"companyUrl\": \"https://Paramount.de\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/companies",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"companies"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Company anlegen - Lions Gate",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "2f03633d-96be-49dd-84bb-a9968c73860d",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+													"});\r",
+													"pm.test(\"Response time is less than 200ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Lions Gate\",\r\n    \"countryCode\": \"65555\",\r\n    \"place\": \"London\",\r\n    \"street\": \"Londonstreet 30\",\r\n    \"phoneNumber\": \"0044071422 643623\",\r\n    \"companyUrl\": \"https://Lionsgate.de\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/companies",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"companies"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Company anlegen - Pixar",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "2a872c0e-f545-44e4-ab07-165c4930eb6a",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+													"});\r",
+													"pm.test(\"Response time is less than 200ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Pixar\",\r\n    \"countryCode\": \"13555\",\r\n    \"place\": \"Hamburg\",\r\n    \"street\": \"Reperbahn 4\",\r\n    \"phoneNumber\": \"05172 6436723\",\r\n    \"companyUrl\": \"https://Pixar.de\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/companies",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"companies"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Company anlegen - Amazon",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "ead8b9c2-6580-45e2-b437-9de0e92d2885",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+													"});\r",
+													"pm.test(\"Response time is less than 200ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Amazon\",\r\n    \"countryCode\": \"73455\",\r\n    \"place\": \"Welzheim\",\r\n    \"street\": \"Römerstraße 130\",\r\n    \"phoneNumber\": \"07182 112623\",\r\n    \"companyUrl\": \"https://Amazon.de\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/companies",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"companies"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Company anlegen - Google",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "f9c8e385-775d-4f04-abbc-c55d9aed6fa6",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+													"});\r",
+													"pm.test(\"Response time is less than 200ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Google\",\r\n    \"countryCode\": \"73559\",\r\n    \"place\": \"Plüderhausen\",\r\n    \"street\": \"Googlestreet 4\",\r\n    \"phoneNumber\": \"07174 6344623\",\r\n    \"companyUrl\": \"https://Google.de\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/companies",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"companies"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Company anlegen - Ebay",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "2b7ba902-0af4-466b-9913-d90738235a56",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+													"});\r",
+													"pm.test(\"Response time is less than 200ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Ebay\",\r\n    \"countryCode\": \"73655\",\r\n    \"place\": \"Dubai\",\r\n    \"street\": \"Dubaistreet 30\",\r\n    \"phoneNumber\": \"07132 643523\",\r\n    \"companyUrl\": \"https://Ebay.de\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/companies",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"companies"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Company anlegen - Ebay Copy",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "51e6fe88-e15d-4466-a19f-ca556e068f60",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+													"});\r",
+													"pm.test(\"Response time is less than 200ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Ebay\",\r\n    \"countryCode\": \"73655\",\r\n    \"place\": \"Dubai\",\r\n    \"street\": \"Dubaistreet 30\",\r\n    \"phoneNumber\": \"07132 643523\",\r\n    \"companyUrl\": \"https://Ebay.de\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/companies",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"companies"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Company anlegen - Ebay Copy 2",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "8170c15c-e1c1-41e0-a33e-9d4c8e536888",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+													"});\r",
+													"pm.test(\"Response time is less than 200ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Ebay\",\r\n    \"countryCode\": \"73655\",\r\n    \"place\": \"Dubai\",\r\n    \"street\": \"Dubaistreet 30\",\r\n    \"phoneNumber\": \"07132 643523\",\r\n    \"companyUrl\": \"https://Ebay.de\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/companies",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"companies"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Customer Anlegen ID 37-48",
+							"item": [
+								{
+									"name": "Customer anlegen - Kurt Russel",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{  \r\n    \"firstName\":\"Kurt\",\r\n    \"lastName\":\"Russel\",\r\n    \"companyPosition\": \"CEO\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/customers",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"customers"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Customer anlegen - Hugo Boss",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{  \r\n    \"firstName\":\"Hugo\",\r\n    \"lastName\":\"Boss\",\r\n    \"companyPosition\": \"CEO\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/customers",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"customers"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Customer anlegen - Arnold Schwarzenegger",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{  \r\n    \"firstName\":\"Arnold\",\r\n    \"lastName\":\"Schwarzenegger\",\r\n    \"companyPosition\": \"CEO\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/customers",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"customers"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Customer anlegen - Van Diesel",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{  \r\n    \"firstName\":\"Van\",\r\n    \"lastName\":\"Diesel\",\r\n    \"companyPosition\": \"CEO\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/customers",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"customers"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Customer anlegen - Bruce Lee",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{  \r\n    \"firstName\":\"Bruce\",\r\n    \"lastName\":\"Lee\",\r\n    \"companyPosition\": \"CEO\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/customers",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"customers"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Customer anlegen - Jet Lee",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{  \r\n    \"firstName\":\"Jet\",\r\n    \"lastName\":\"Lee\",\r\n    \"companyPosition\": \"CFO\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/customers",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"customers"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Customer anlegen - Chuck Norris",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{  \r\n    \"firstName\":\"Chuck\",\r\n    \"lastName\":\"Norris\",\r\n    \"companyPosition\": \"GOD\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/customers",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"customers"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Customer anlegen - Evender Hollyfield",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{  \r\n    \"firstName\":\"Evender\",\r\n    \"lastName\":\"Hollyfield\",\r\n    \"companyPosition\": \"CFO\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/customers",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"customers"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Customer anlegen - Helmut Kohl",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{  \r\n    \"firstName\":\"Helmut\",\r\n    \"lastName\":\"Kohl\",\r\n    \"companyPosition\": \"CEO\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/customers",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"customers"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Customer anlegen - Gehard Schröder",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{  \r\n    \"firstName\":\"Gehard\",\r\n    \"lastName\":\"Schröder\",\r\n    \"companyPosition\": \"CEO\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/customers",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"customers"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Customer anlegen - Gehard Schröder Copy",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{  \r\n    \"firstName\":\"Gehard\",\r\n    \"lastName\":\"Schröder\",\r\n    \"companyPosition\": \"CEO\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/customers",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"customers"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Customer anlegen - Gehard Schröder Copy 2",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{  \r\n    \"firstName\":\"Gehard\",\r\n    \"lastName\":\"Schröder\",\r\n    \"companyPosition\": \"CEO\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/customers",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"customers"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Activities Anlegen",
+							"item": [
+								{
+									"name": "Activity anlegen Copy",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"description\": \"bla\",\r\n    \"project\": \"http://localhost:8080/api/projects/2\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/activities",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"activities"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Mit Verknüpfungen",
+					"item": [
+						{
+							"name": "Customer",
+							"item": [
+								{
+									"name": "+ Company",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "9f550e6c-c692-44ef-a7d0-55a10e940f9f",
+												"exec": [
+													"\r",
+													"pm.test(\"Response time is less than 200ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+													"});\r",
+													"pm.test(\"Successful POST request\", function () {\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \r\n    \"firstName\":\"Dagobert\",\r\n    \"lastName\":\"Duck\",\r\n    \"companyPosition\": \"CFO\",\r\n    \"company\": \"http://localhost:8080/api/companies/25\"\r\n\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/customers",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"customers"
+											]
+										},
+										"description": "Legt einen Kunden mit zugehörigen Firma an."
+									},
+									"response": []
+								},
+								{
+									"name": "+ User",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "ad9882b4-f3d0-4be9-af91-9fd282fc3ea6",
+												"exec": [
+													"\r",
+													"pm.test(\"Response time is less than 200ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+													"});\r",
+													"pm.test(\"Successful POST request\", function () {\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \r\n    \"firstName\":\"Daisy\",\r\n    \"lastName\":\"Duck\",\r\n    \"companyPosition\": \"CFO\",\r\n    \"user\": \"http://localhost:8080/api/user/1\"\r\n\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/customers",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"customers"
+											]
+										},
+										"description": "Legt einen Kunden mit zugehörigen Firma an."
+									},
+									"response": []
+								},
+								{
+									"name": "+ User + Company",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "fa0ebd81-a73d-483a-b3a9-4b2114152a90",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+													"});\r",
+													"pm.test(\"Response time is less than 200ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \r\n    \"firstName\":\"Marius\",\r\n    \"lastName\":\"Müller-Westernhagen\",\r\n    \"companyPosition\": \"CEO\",\r\n    \"company\": \"http://localhost:8080/api/companies/26\",\r\n    \"user\": \"http://localhost:8080/api/users/2\"\r\n\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/customers",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"customers"
+											]
+										},
+										"description": "Legt einen Kunden mit zugehörigen Firma und Projekt an."
+									},
+									"response": []
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Company",
+							"item": [
+								{
+									"name": "+ Project",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "934112dc-c65c-406a-b9c8-d59e56c9d528",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+													"});\r",
+													"pm.test(\"Response time is less than 200ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Stihl\",\r\n    \"countryCode\": \"73555\",\r\n    \"place\": \"Wiblingen\",\r\n    \"street\": \"Stihlstraße 303\",\r\n    \"phoneNumber\": \"07162 900042\",\r\n    \"companyUrl\": \"https://Stihl.de\",\r\n    \"project\": \"http://localhost:8080/projects/13\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/companies",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"companies"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "+ User",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "48f85ec9-fa41-49ae-a62c-5c12d600a821",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+													"});\r",
+													"pm.test(\"Response time is less than 200ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Volkswagen\",\r\n    \"countryCode\": \"43553\",\r\n    \"place\": \"Wolfsburg\",\r\n    \"street\": \"Volksstraße 66\",\r\n    \"phoneNumber\": \"07192 988432\",\r\n    \"companyUrl\": \"https://Volkswagen.de\",\r\n    \"user\": \"http://localhost:8080/api/users/3\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/companies",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"companies"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "+ Customer",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "ac1ebe8a-ca3b-457f-ad5e-ffd48be71cc3",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+													"});\r",
+													"pm.test(\"Response time is less than 200ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Scania\",\r\n    \"countryCode\": \"73583\",\r\n    \"place\": \"Waldhausen\",\r\n    \"street\": \"Waldstraße 65\",\r\n    \"phoneNumber\": \"07172 146574\",\r\n    \"companyUrl\": \"https://Scania.de\",\r\n    \"customer\": \"http://localhost:8080/api/customers/37\"\r\n\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/companies",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"companies"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "+ Customer + User",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "31e74676-7713-40c0-9125-887256220aad",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+													"});\r",
+													"pm.test(\"Response time is less than 200ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Ferrari\",\r\n    \"countryCode\": \"70556\",\r\n    \"place\": \"Rom\",\r\n    \"street\": \"Eisraße 79\",\r\n    \"phoneNumber\": \"27372 9082167\",\r\n    \"companyUrl\": \"https://Ferrari.de\",\r\n    \"customer\": \"http://localhost:8080/api/customers/38\",\r\n    \"user\": \"http://localhost:8080/api/users/4\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/companies",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"companies"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "+ Customer + Project",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "6354d70d-f9a7-4ec8-b48c-268a601cd9d5",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+													"});\r",
+													"pm.test(\"Response time is less than 200ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Mercedes\",\r\n    \"countryCode\": \"73553\",\r\n    \"place\": \"Stuttgart\",\r\n    \"street\": \"Benzstraße 67\",\r\n    \"phoneNumber\": \"07772 182632\",\r\n    \"companyUrl\": \"https://Mercedes.de\",\r\n    \"project\": \"http://localhost:8080/projects/14\",\r\n    \"customer\": \"http://localhost:8080/customers/39\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/companies",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"companies"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "+ Project + User",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "df31c51c-e472-4344-b3f8-c607f9e17d16",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+													"});\r",
+													"pm.test(\"Response time is less than 200ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"BMW\",\r\n    \"countryCode\": \"78553\",\r\n    \"place\": \"München\",\r\n    \"street\": \"Motorstraße 34\",\r\n    \"phoneNumber\": \"07182 1885432\",\r\n    \"companyUrl\": \"https://BMW.de\",\r\n    \"project\": \"http://localhost:8080/projects/15\",\r\n    \"user\": \"http://localhost:8080/api/users/5\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/companies",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"companies"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "+ Project + Customer + User",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "23e9055d-f773-49cd-9b7c-018ad3b48f23",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+													"});\r",
+													"pm.test(\"Response time is less than 200ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Peugot\",\r\n    \"countryCode\": \"70553\",\r\n    \"place\": \"Paris\",\r\n    \"street\": \"Eifelstraße 77\",\r\n    \"phoneNumber\": \"22172 908432\",\r\n    \"companyUrl\": \"https://Peugot.de\",\r\n    \"project\": \"http://localhost:8080/api/projects/16\",\r\n    \"customer\": \"http://localhost:8080/api/customers/40\",\r\n    \"user\": \"http://localhost:8080/api/users/6\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/companies",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"companies"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Project",
+							"item": [
+								{
+									"name": "+ Activity",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Game of Thrones\",\r\n    \"description\":\"Der Winter naht\",\r\n    \"actualEndDate\":\"2022-03-10T16:00:00.000\",\r\n    \"planedEndDate\":\"2021-03-10T16:00:00.000\",\r\n    \"startDate\":\"2020-03-10T16:00:00.000\",\r\n    \"status\":\"0\",\r\n    \"planedProjectWorkingHours\": 2000,\r\n    \"project\": \"http://localhost:8080/api/avtivities/2\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/activities",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"activities"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "+ User",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "4c2e91d9-db77-4676-85a1-bd92397d040b",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+													"});\r",
+													"pm.test(\"Response time is less than 200ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Game of Thrones\",\r\n    \"description\":\"Der Winter naht\",\r\n    \"actualEndDate\":\"2022-03-10T16:00:00.000\",\r\n    \"planedEndDate\":\"2021-03-10T16:00:00.000\",\r\n    \"startDate\":\"2020-03-10T16:00:00.000\",\r\n    \"status\":\"0\",\r\n    \"planedProjectWorkingHours\": 2000,\r\n    \"user\": \"http://localhost:8080/users/7\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/projects",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"projects"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "+ Customer",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "56c2b236-c92c-4689-99f0-99e033080a99",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+													"});\r",
+													"pm.test(\"Response time is less than 200ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Ab durch die Hecke\",\r\n    \"description\":\"Eine Tierische Komödie\",\r\n    \"actualEndDate\":\"2022-03-10T16:00:00.000\",\r\n    \"planedEndDate\":\"2021-03-10T16:00:00.000\",\r\n    \"startDate\":\"2020-03-10T16:00:00.000\",\r\n    \"status\":\"0\",\r\n    \"planedProjectWorkingHours\": 2000,\r\n    \"customer\": \"http://localhost:8080/customers/48\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/projects",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"projects"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "+ Company",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "e14f8b9e-e186-406a-a516-9df0bfb78625",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+													"});\r",
+													"pm.test(\"Response time is less than 200ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Basic Instinkt\",\r\n    \"description\":\"Eine Frau und ihr Eispickel\",\r\n    \"actualEndDate\":\"2022-03-10T16:00:00.000\",\r\n    \"planedEndDate\":\"2021-03-10T16:00:00.000\",\r\n    \"startDate\":\"2020-03-10T16:00:00.000\",\r\n    \"status\":\"0\",\r\n    \"planedProjectWorkingHours\": 2000,\r\n    \"company\": \"http://localhost:8080/companies/27\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/projects",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"projects"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "+ Company + User",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "b1755286-6108-4c92-bb89-af7c6179ddb5",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+													"});\r",
+													"pm.test(\"Response time is less than 200ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"UHF\",\r\n    \"description\":\"EIn Hausmeister leitet einen Fernsehsender\",\r\n    \"actualEndDate\":\"2022-03-10T16:00:00.000\",\r\n    \"planedEndDate\":\"2021-03-10T16:00:00.000\",\r\n    \"startDate\":\"2020-03-10T16:00:00.000\",\r\n    \"status\":\"0\",\r\n    \"planedProjectWorkingHours\": 2000,\r\n    \"company\": \"http://localhost:8080/companies/28\",\r\n    \"user\": \"http://localhost:8080/users/8\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/projects",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"projects"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "+ Customer + User",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "94b50bfe-695c-4542-b1e6-ab9990d96181",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+													"});\r",
+													"pm.test(\"Response time is less than 200ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"The Avengers\",\r\n    \"description\":\"A Superhero Movie\",\r\n    \"actualEndDate\":\"2022-03-10T16:00:00.000\",\r\n    \"planedEndDate\":\"2021-03-10T16:00:00.000\",\r\n    \"startDate\":\"2020-03-10T16:00:00.000\",\r\n    \"status\":\"0\",\r\n    \"planedProjectWorkingHours\": 2000,\r\n    \"customer\": \"http://localhost:8080/customers/41\",\r\n    \"user\": \"http://localhost:8080/users/9\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/projects",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"projects"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "+ Company + Customer",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "9a98b33c-1d0b-41c3-abb5-6fe232039f4e",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+													"});\r",
+													"pm.test(\"Response time is less than 200ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Spaceballs\",\r\n    \"description\":\"Spaceballs im Weltall\",\r\n    \"actualEndDate\":\"2022-03-10T16:00:00.000\",\r\n    \"planedEndDate\":\"2021-03-10T16:00:00.000\",\r\n    \"startDate\":\"2020-03-10T16:00:00.000\",\r\n    \"status\":\"0\",\r\n    \"planedProjectWorkingHours\": 2000,\r\n    \"company\": \"http://localhost:8080/companies/29\",\r\n    \"customer\": \"http://localhost:8080/customers/42\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/projects",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"projects"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "+ Company + Customer + User",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "6b0484dc-f2d6-4791-a395-f5c113cf9103",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+													"});\r",
+													"pm.test(\"Response time is less than 200ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"The Avengers\",\r\n    \"description\":\"A Superhero Movie\",\r\n    \"actualEndDate\":\"2022-03-10T16:00:00.000\",\r\n    \"planedEndDate\":\"2021-03-10T16:00:00.000\",\r\n    \"startDate\":\"2020-03-10T16:00:00.000\",\r\n    \"status\":\"0\",\r\n    \"planedProjectWorkingHours\": 2000,\r\n    \"company\": \"http://localhost:8080/companies/30\",\r\n    \"customer\": \"http://localhost:8080/customers/43\",\r\n    \"user\": \"http://localhost:8080/users/10\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/projects",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"projects"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "User",
+							"item": [
+								{
+									"name": "+ Company",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "82e4094c-d670-4789-a4a7-ad111523856a",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+													"});\r",
+													"pm.test(\"Response time is less than 200ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"firstName\":\"Max\",\r\n    \"lastName\":\"Müller\",\r\n    \"utiligencePosition\": \"trainee\",\r\n    \"company\": \"http://localhost:8080/api/companies/31\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/users",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"users"
+											]
+										},
+										"description": "Legt einen Benutzer an"
+									},
+									"response": []
+								},
+								{
+									"name": "+ Customer",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "3081cc6e-9dc0-41c3-a7f5-0ad387af5b6a",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+													"});\r",
+													"pm.test(\"Response time is less than 200ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"firstName\":\"Max\",\r\n    \"lastName\":\"Müller\",\r\n    \"utiligencePosition\": \"trainee\",\r\n    \"customer\": \"http://localhost:8080/api/customers/44\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/users",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"users"
+											]
+										},
+										"description": "Legt einen Benutzer an"
+									},
+									"response": []
+								},
+								{
+									"name": "+ Company + Customer",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "f1b819c1-6e36-4a42-a4db-fca426be1a02",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {\r",
+													"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+													"});\r",
+													"pm.test(\"Response time is less than 200ms\", function () {\r",
+													"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"firstName\":\"Max\",\r\n    \"lastName\":\"Müller\",\r\n    \"utiligencePosition\": \"trainee\",\r\n    \"company\": \"http://localhost:8080/api/companies/32\",\r\n    \"customer\": \"http://localhost:8080/api/customers/45\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8080/api/users",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"api",
+												"users"
+											]
+										},
+										"description": "Legt einen Benutzer an"
+									},
+									"response": []
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Not Working",
+			"item": [
+				{
+					"name": "Customer",
+					"item": [
+						{
+							"name": "+ Project",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "ad818a28-cd4f-4135-b09d-a6a31e288408",
+										"exec": [
+											"\r",
+											"pm.test(\"Response time is less than 200ms\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+											"});\r",
+											"pm.test(\"Successful POST request\", function () {\r",
+											"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \r\n    \"firstName\":\"Micky\",\r\n    \"lastName\":\"Maus\",\r\n    \"companyPosition\": \"CEO\",\r\n    \"project\": \"http://localhost:8080/api/customers/projects/17\"\r\n        \r\n\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/customers",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"customers"
+									]
+								},
+								"description": "Legt einen Kunden mit Projekt an."
+							},
+							"response": []
+						},
+						{
+							"name": "+ Project + User",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "a40837a5-cd59-4bb7-ac6d-1835a8acde5a",
+										"exec": [
+											"\r",
+											"pm.test(\"Response time is less than 200ms\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+											"});\r",
+											"pm.test(\"Successful POST request\", function () {\r",
+											"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \r\n    \"firstName\":\"Donald\",\r\n    \"lastName\":\"Duck\",\r\n    \"companyPosition\": \"COO\",\r\n    \"project\": \"http://localhost:8080/projects/18\",\r\n    \"user\": \"http://localhost:8080/api/user/11\"\r\n        \r\n\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/customers",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"customers"
+									]
+								},
+								"description": "Legt einen Kunden mit Projekt an."
+							},
+							"response": []
+						},
+						{
+							"name": "+ Project + Company",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "9344895d-b490-4d4c-9480-328e7e3a2751",
+										"exec": [
+											"pm.test(\"Successful POST request\", function () {\r",
+											"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+											"});\r",
+											"pm.test(\"Response time is less than 200ms\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \r\n    \"firstName\":\"Bruno\",\r\n    \"lastName\":\"Mars\",\r\n    \"companyPosition\": \"CFO\",\r\n    \"company\": \"http://localhost:8080/api/companies/33\",\r\n    \"project\": \"http://localhost:8080/api/projects/19\"\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/customers",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"customers"
+									]
+								},
+								"description": "Legt einen Kunden mit zugehörigen Firma und Projekt an."
+							},
+							"response": []
+						},
+						{
+							"name": "+ Project + Company + User",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "cdc6bb11-57bf-4cc6-90cd-dc99ce556940",
+										"exec": [
+											"pm.test(\"Successful POST request\", function () {\r",
+											"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+											"});\r",
+											"pm.test(\"Response time is less than 200ms\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \r\n    \"firstName\":\"Bruno\",\r\n    \"lastName\":\"Mars\",\r\n    \"companyPosition\": \"CFO\",\r\n    \"company\": \"http://localhost:8080/api/companies/34\",\r\n    \"project\": \"http://localhost:8080/api/projects/20\",\r\n    \"user\": \"http://localhost:8080/api/user/12\"\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/customers",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"customers"
+									]
+								},
+								"description": "Legt einen Kunden mit zugehörigen Firma und Projekt an."
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "User",
+					"item": [
+						{
+							"name": "+ Project",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "7f73476c-b4cd-4c21-bbdf-b4201d46874d",
+										"exec": [
+											"pm.test(\"Successful POST request\", function () {\r",
+											"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+											"});\r",
+											"pm.test(\"Response time is less than 200ms\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\":\"Max\",\r\n    \"lastName\":\"Müller\",\r\n    \"utiligencePosition\": \"trainee\",\r\n    \"project\": \"http://localhost:8080/api/projects/21\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"users"
+									]
+								},
+								"description": "Legt einen Benutzer an"
+							},
+							"response": []
+						},
+						{
+							"name": "+ Project + Company",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "fe57fc6a-b9bf-44fd-9fc8-ddd59863f631",
+										"exec": [
+											"pm.test(\"Successful POST request\", function () {\r",
+											"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+											"});\r",
+											"pm.test(\"Response time is less than 200ms\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\":\"Max\",\r\n    \"lastName\":\"Müller\",\r\n    \"utiligencePosition\": \"trainee\",\r\n    \"project\": \"http://localhost:8080/api/projects/22\",\r\n    \"company\": \"http://localhost:8080/api/companies/35\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"users"
+									]
+								},
+								"description": "Legt einen Benutzer an"
+							},
+							"response": []
+						},
+						{
+							"name": "+ Project + Customer",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "3e04f49e-ffd7-4b93-829d-40d1199d5da1",
+										"exec": [
+											"pm.test(\"Successful POST request\", function () {\r",
+											"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+											"});\r",
+											"pm.test(\"Response time is less than 200ms\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\":\"Max\",\r\n    \"lastName\":\"Müller\",\r\n    \"utiligencePosition\": \"trainee\",\r\n    \"project\": \"http://localhost:8080/api/projects/23\",\r\n    \"customer\": \"http://localhost:8080/api/customers/46\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"users"
+									]
+								},
+								"description": "Legt einen Benutzer an"
+							},
+							"response": []
+						},
+						{
+							"name": "+ Project + Customer + Company",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "9e92777d-9ccc-4fd5-ab14-26f32cba9872",
+										"exec": [
+											"pm.test(\"Successful POST request\", function () {\r",
+											"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+											"});\r",
+											"pm.test(\"Response time is less than 200ms\", function () {\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\":\"Max\",\r\n    \"lastName\":\"Müller\",\r\n    \"utiligencePosition\": \"trainee\",\r\n    \"project\": \"http://localhost:8080/api/projects/24\",\r\n    \"customer\": \"http://localhost:8080/api/customers/47\",\r\n    \"company\": \"http://localhost:8080/api/companies/36\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"users"
+									]
+								},
+								"description": "Legt einen Benutzer an"
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
